@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Jost", sans-serif;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(218, 254, 254);
+    padding-top: 10rem;
+}
+
+.player{
+    width: 35rem;
+    height: 55rem;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgb(101, 98, 98);
+    padding: 3rem;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(252, 251, 249);
+    /* margin-top: 10rem; */
+}
+
+#title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: rgba(37, 31, 31, 0.996);
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgb(119, 119, 119);
+}
+
+#artist{
+    color: rgba(50, 45, 45, 0.761);
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+.img{
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgb(108, 107, 107);
+    /* box-sizing: border-box; */
+}
+
+.controls{
+    font-size: 2rem;
+    /* cursor: pointer; */
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgb(70, 64, 64));
+    width:  20rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+#play{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.fa:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.ppButton:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 1rem 2rem 0.2rem black;
+}
+
+.anime{
+    animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+
+.progress_bar{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.bar{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    /* transition: all 1s linear; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.meter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(72, 75, 184);
+
+    border-radius: 4rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    transition: all 1s linear;
+}
+
+.timing{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
